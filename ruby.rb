@@ -25,6 +25,7 @@ puts 15 % 4;
 
 
 #if, elsif, else, end
+puts '-------'
 yourAge = 21;
 
 if yourAge <= 17
@@ -36,3 +37,54 @@ elsif yourAge > 100
 else
   puts 'what is your gender?'
 end
+
+#formatters
+puts '-------'
+myName = "carlos perez"
+
+puts myName.capitalize
+puts myName.upcase
+puts myName.downcase
+puts myName.reverse
+puts myName.length
+
+starWarsSeven = 'jar jar binks han solo luke lens flare'
+puts starWarsSeven[14..26]
+
+puts starWarsSeven[15]
+
+puts '-------'
+
+# .split method
+# splits the words
+rockBottom = "Mary Kate Olson Lindsay Lohan Charlie Sheen"
+puts rockBottom.split
+
+
+#
+date = "11/17/2013"
+puts date.split("/")
+puts date[2]
+puts date[0..4] # this does include the last characer
+puts date[0...5] # does not include the 5th character
+
+
+puts '-------'
+# arrays
+arrayFamilies = ["brady", "partridge", "bundy", "cosby"]
+
+puts arrayFamilies
+puts arrayFamilies[0]
+
+sodaType = ["sprite", 34.2, "mountain dew", 1-3, "orange soda"]
+stringOne = "Your favorite drink is "
+
+puts sodaType
+puts sodaType[0]
+puts sodaType[1]
+puts sodaType[-2]
+
+puts stringOne + sodaType[0]
+puts sodaType[4] + " tastes delicious!"
+
+$end
