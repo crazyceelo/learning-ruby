@@ -192,6 +192,73 @@ sayHello("Mike", 6)
 sayHello("Mike") # prints default values defined in parameters
 # if all parameters are not complete
 
+sayHello # default parameters
+
+# return types or return statements
+def cube(num=2)
+  return num * num * num, 70 # I can return multiple things? Nice!
+  # code after return does not get executed
+  puts "no more code"
+end
+
+puts cube # returns default value and 70
+puts ''
+puts cube(3) # returns cubed and 70
+puts ''
+puts cube(3)[0] # returns cubed only
+puts ''
+puts cube(3)[1] # returns 70 only
+
+
+# method in an if statement
+puts '----'
+puts 'method and if statement'
+def max(num1 = 4, num2 = 5, num3 = 2)
+  if num1 >= num2 and num1 >= num3
+    return num1
+  elsif num2 >= num1 and num2 >= num3
+    return num2
+  else
+    return num3
+  end
+end
+
+puts max(1,20, 3)
+puts max
+
+
+# case expression. switch case in JS
+def get_day_name(day)
+  day_name = ""
+
+  case day
+  when "mon"
+    day_name = "Monday"
+  when "tue"
+    day_name = "Tuesday"
+  when "wed"
+    day_name = "Wednesday"
+  when "thur"
+    day_name = "Thursday"
+  when "fri"
+    day_name = "Friday"
+  when 'sat'
+    day_name = "Saturday"
+  when 'sun'
+    day_name = "Sunday"
+  else
+    day_name = "invalid abbreviation"
+  end
+
+  return day_name
+end
+
+puts get_day_name("mon")
+puts get_day_name("asd")
+puts get_day_name
+puts get_day_name("tue")
+
+# while loop in ruby
 
 
 
