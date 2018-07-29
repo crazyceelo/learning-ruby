@@ -87,4 +87,49 @@ puts sodaType[-2]
 puts stringOne + sodaType[0]
 puts sodaType[4] + " tastes delicious!"
 
+puts '-------'
+# more string methods
+stuff = 'first string'
+puts stuff.upcase() # makes string all upper case
+puts stuff.downcase() # converts to all lower case letters
+puts stuff.strip() # removes leading/trailing spaces
+puts stuff.length() # length of charactrers/spaces in a string
+puts stuff.include? "first" # returns true
+puts stuff.include? "firstasdf" # returns false
+puts stuff[0] # prints the f in first
+puts stuff[0,3] # prints fir. only the first 3 characters.
+puts stuff.index("f") # displays index 0
+puts 'strings'.upcase # you can use method right after the string itself
+
+
+# numbers and stuff
+puts 5
+puts 3.1453
+puts 5+9
+puts 5-9
+puts 5*9
+puts 5/9
+puts 2**3 # two to the third power 2^3
+puts 10%3    # modulus operator. it prints out the remaind of dividing two numbers
+puts "text " + 6.to_s
+
+num = -20
+number = 12.43232
+
+puts num.abs() #absolute value
+puts number.round() #rounds up or down
+puts number.ceil() # rounds up
+puts number.floor() # rounds down
+puts Math.sqrt(36)
+puts Math.log(1)
+puts 1 + 7 # returns an int
+puts 1.0 + 7 # returns a float
+puts 10/7.0 # returns fload
+
+# user input
+
+
+
+
+
 $end
