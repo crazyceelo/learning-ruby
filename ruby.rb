@@ -127,6 +127,72 @@ puts 1.0 + 7 # returns a float
 puts 10/7.0 # returns fload
 
 # user input
+# puts '-------'
+# puts "Enter your name: "
+# name = gets.chomp() # removes the invisible \n it creates when clicking enter
+# puts ("Hello " + name + ", you are cool")
+
+
+
+# more arrays
+friends = Array["Kevin", "Karen", "Oscar"]
+puts friends[0]
+puts friends[1]
+print friends[0, 2] # prints kevin and karen only
+puts ''
+puts "test"
+
+friends[0] = "Dwight" # replaces Kevin with Dwight at the same index
+print friends
+puts ""
+
+family = Array.new
+family[0] = "Jimmy"
+family[5] = "Holly"
+
+print family # prints out ["Jimmy", nil, nil, nil, nil, "Holly"]
+puts ''
+puts family.length # number of elements in an array
+puts family.include? "Jimmy" # returns true
+puts family.include? nil # returns true
+puts family.include? "nil" # returns false
+puts family.include? "stuff" # returns false
+
+print family.reverse() # prints out ["Holly", nil, nil, nil, nil, "Jimmy"]
+puts ""
+
+# hashes - these are key value pairs. they are like objects in JS
+states = {
+  "Pennsylvania" => "PA",
+  "California" => "CA", 
+  "New Yor" => "NY",
+  "Oregon" => "OR"
+}
+
+puts states
+puts states["Oregon"]
+puts states["New Yor"]
+puts states["California"]
+puts ''
+
+# Methods
+def sayhi
+  puts "hello user"
+end
+
+sayhi()
+sayhi # you dont have to use () or ; in ruby
+
+def sayHello(name="no name", age=-1)
+  puts "hello " + name + ", you are " + age.to_s
+end
+
+sayHello("Mike", 6)
+
+sayHello("Mike") # prints default values defined in parameters
+# if all parameters are not complete
+
+
 
 
 
