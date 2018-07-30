@@ -255,14 +255,38 @@ end
 
 puts get_day_name("mon")
 puts get_day_name("asd")
-puts get_day_name
-puts get_day_name("tue")
 
 # while loop in ruby
+puts = "-------while loop -=-----"
+index = 1
+
+while index <= 5
+  puts index
+  index += 1
+end
 
 
 
+secret_word = "cat"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = false
+
+while guess != secret_word and !out_of_guesses
+  if guess_count < guess_limit
+    puts "Enter Guess: "
+    guess = gets.chomp()
+    guess_count += 1
+  else
+    out_of_guesses = true
+  end
+end
+
+if out_of_guesses
+  puts "you lose"
+else
+  puts 'you win'
+end
 
 
-
-$end
