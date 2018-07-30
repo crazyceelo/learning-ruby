@@ -273,20 +273,84 @@ guess_count = 0
 guess_limit = 3
 out_of_guesses = false
 
-while guess != secret_word and !out_of_guesses
-  if guess_count < guess_limit
-    puts "Enter Guess: "
-    guess = gets.chomp()
-    guess_count += 1
-  else
-    out_of_guesses = true
+# while guess != secret_word and !out_of_guesses
+#   if guess_count < guess_limit
+#     puts "Enter Guess: "
+#     guess = gets.chomp()
+#     guess_count += 1
+#   else
+#     out_of_guesses = true
+#   end
+# end
+
+# if out_of_guesses
+#   puts "you lose"
+# else
+#   puts 'you win'
+# end
+
+
+# for loop
+
+
+# classes and objects
+class Book
+  attr_accessor :title, :author, :pages
+
+  def initialize(title, author, pages)
+    @title = title
+    @author = author
+    @pages = pages
   end
 end
 
-if out_of_guesses
-  puts "you lose"
-else
-  puts 'you win'
+# book1 = Book.new()
+# book1.title = "Harry Potter"
+# book1.author = "JK Rowling"
+# book1.pages = 400
+# puts book1.title
+# puts book1.pages
+# puts book1.author
+
+# puts '------'
+
+# book2 = Book.new()
+# book2.title = "Lord of the Trings"
+# book2.author = "Tolkein"
+# book2.pages = 500
+# puts book2.title
+# puts book2.pages
+# puts book2.author
+
+book3 = Book.new("title", "authbor", 8)
+puts book3.title
+puts book3.author
+puts book3.pages
+
+class Student
+  attr_accessor :name, :major, :gpa
+
+  def initialize(name, major, gpa)
+    @name = name
+    @major = major
+    @gpa = gpa
+  end
+
+  def has_honors
+    if @gpa > 3.5
+      return true
+    else
+      return false
+    end
+  end
 end
 
+student1 = Student.new("him", "bus", 4.0)
+puts student1.gpa
 
+student2 = Student.new("tom", "math", 2.0)
+puts student2.name
+
+puts student1.has_honors
+
+puts student2.has_honors
